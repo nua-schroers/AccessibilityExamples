@@ -2,3 +2,4 @@
 language: objective-c
 xcode_project: AccessibilityExamples.xcodeproj
 xcode_scheme: AccessibilityExamples
+xcode_sdk: iphonesimulator8.1
