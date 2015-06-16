@@ -1,1 +1,4 @@
+# This is actually a Swift-project.
 language: objective-c
+xcode_project: AccessibilityExamples.xcodeproj
+xcode_scheme: AccessibilityExamples
