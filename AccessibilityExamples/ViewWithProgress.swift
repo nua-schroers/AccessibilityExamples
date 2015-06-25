@@ -22,7 +22,7 @@ class ViewWithProgress: CustomView {
 
     /// MARK: Properties
 
-    var startButton:UIButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+    var startButton:UIButton = UIButton(type:.System) as UIButton
     var progressBar = UIProgressView(progressViewStyle: .Default)
 
     var destructionTimer:NSTimer?

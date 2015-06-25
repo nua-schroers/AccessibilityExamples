@@ -12,15 +12,10 @@ import UIKit
 /// made accessible.
 class CustomView: UIView {
 
-    /// Initializers for the various cases (we only need the second
+    /// Initializers for the various cases (we only need the first
     /// one for this example app).
     ///
     /// These initializers should not be overridden.
-
-    override init() {
-        super.init()
-        self.setup()
-    }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

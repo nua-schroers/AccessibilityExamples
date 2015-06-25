@@ -59,7 +59,7 @@ class ViewWithCustomElements: CustomView {
 
         // Properly configure the stand-in for the custom-drawn string
         // "Hello". This works like any other "regular" view.
-        var element1 = UIAccessibilityElement(accessibilityContainer: self)
+        let element1 = UIAccessibilityElement(accessibilityContainer: self)
         element1.accessibilityFrame = firstStringFrame
         element1.accessibilityLabel = "Shows Hello"
         element1.accessibilityTraits = UIAccessibilityTraitStaticText

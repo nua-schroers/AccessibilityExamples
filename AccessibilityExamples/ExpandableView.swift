@@ -16,7 +16,7 @@ class ExpandableView: CustomView {
 
     /// MARK: Properties
 
-    var expandButton:UIButton = UIButton.buttonWithType(.System) as UIButton
+    var expandButton:UIButton = UIButton(type:.System) as UIButton
     var moreTextLabel = UILabel(frame: CGRectMake(5, 30, 200, 120))
 
     /// MARK: Private methods
