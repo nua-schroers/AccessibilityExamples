@@ -22,10 +22,10 @@ class ViewWithProgress: CustomView {
 
     /// MARK: Properties
 
-    var startButton:UIButton = UIButton(type:.system) as UIButton
-    var progressBar = UIProgressView(progressViewStyle: .default)
+    var startButton:UIButton = UIButton(type:.System) as UIButton
+    var progressBar = UIProgressView(progressViewStyle: .Default)
 
-    var destructionTimer:Timer?
+    var destructionTimer:NSTimer?
     var destructionProgress = 0.0
 
     /// MARK: Private methods
@@ -34,10 +34,10 @@ class ViewWithProgress: CustomView {
         super.setup()
 
         // View setup (nothing to do with Accessibility).
-        self.startButton.frame = CGRect(x: 5, y: 5, width: 100, height: 20)
-        self.startButton.setTitle("Selfdestruct", for: UIControlState())
-        self.startButton.addTarget(self, action: #selector(ViewWithProgress.userDidPressSelfdestruct), for: .touchUpInside)
-        self.progressBar.frame = CGRect(x: 5, y: 30, width: 200, height: 20)
+        self.startButton.frame = CGRectMake(5, 5, 100, 20)
+        self.startButton.setTitle("Selfdestruct", forState: .Normal)
+        self.startButton.addTarget(self, action: "userDidPressSelfdestruct", forControlEvents: .TouchUpInside)
+        self.progressBar.frame = CGRectMake(5, 30, 200, 20)
         self.progressBar.progress = 0.0
         self.addSubview(self.progressBar)
         self.addSubview(self.startButton)
@@ -57,14 +57,14 @@ class ViewWithProgress: CustomView {
     /// MARK: Respond to button
 
     func userDidPressSelfdestruct() {
-        self.startButton.isEnabled = false
+        self.startButton.enabled = false
         self.resetTimer()
 
         // Instantiate and trigger a timer that fires every 0.5
         // seconds.
-        let countdownTimer = Timer.scheduledTimer(timeInterval: 0.5,
+        let countdownTimer = NSTimer.scheduledTimerWithTimeInterval(0.5,
             target: self,
-            selector: #selector(ViewWithProgress.progressing),
+            selector: "progressing",
             userInfo: nil,
             repeats: true)
         self.destructionTimer = countdownTimer
@@ -101,7 +101,7 @@ class ViewWithProgress: CustomView {
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Selfdestruct completed")
         case _ where destructionProgress > 25.0 :
             self.resetTimer()
-            self.startButton.isEnabled = true
+            self.startButton.enabled = true
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Alive again")
         default:
             break

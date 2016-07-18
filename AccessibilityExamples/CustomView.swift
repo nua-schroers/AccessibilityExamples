@@ -17,7 +17,7 @@ class CustomView: UIView {
     ///
     /// These initializers should not be overridden.
 
-    required init?(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setup()
     }

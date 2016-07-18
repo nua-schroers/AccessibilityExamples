@@ -20,17 +20,17 @@ class ViewWithCustomElements: CustomView {
 
     /// MARK: Override from UIView
 
-    override func draw(_ rect: CGRect) {
+    override func drawRect(rect: CGRect) {
         // View setup (nothing to do with Accessibility).
 
         // Draw the string "Hello" left-ish in this view.
         let someString = NSString(format: String("Hello"))
-        someString.draw(at: CGPoint(x: 10, y: 10), withAttributes: nil)
+        someString.drawAtPoint(CGPointMake(10, 10), withAttributes: nil)
 
         // Draw the string "World" right-ish in this view.
         let someOtherString = NSString(format: String("World"))
-        let attribs: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.green()]
-        someOtherString.draw(at: CGPoint(x: 120, y: 10), withAttributes: attribs)
+        let attribs: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.greenColor()]
+        someOtherString.drawAtPoint(CGPointMake(120, 10), withAttributes: attribs)
 
         // Setup the accessibility container.
         self.setupContainer()
@@ -48,14 +48,14 @@ class ViewWithCustomElements: CustomView {
         // drawRect may not be called again automatically.
 
         // Get the frame of the first string (in screen coordinates).
-        let firstStringSize = NSString(format: String("Hello")).size(attributes: nil)
-        let firstStringRect = CGRect(x: 10, y: 10, width: firstStringSize.width, height: firstStringSize.height)
-        let firstStringFrame = self.convert(firstStringRect, to: nil)
+        let firstStringSize = NSString(format: String("Hello")).sizeWithAttributes(nil)
+        let firstStringRect = CGRectMake(10, 10, firstStringSize.width, firstStringSize.height)
+        let firstStringFrame = self.convertRect(firstStringRect, toView: nil)
 
         // Get the frame of the second string (in screen coordinates).
-        let secondStringSize = NSString(format: String("World")).size(attributes: nil)
-        let secondStringRect = CGRect(x: 120, y: 10, width: secondStringSize.width, height: secondStringSize.height)
-        let secondStringFrame = self.convert(secondStringRect, to: nil)
+        let secondStringSize = NSString(format: String("World")).sizeWithAttributes(nil)
+        let secondStringRect = CGRectMake(120, 10, secondStringSize.width, secondStringSize.height)
+        let secondStringFrame = self.convertRect(secondStringRect, toView: nil)
 
         // Properly configure the stand-in for the custom-drawn string
         // "Hello". This works like any other "regular" view.

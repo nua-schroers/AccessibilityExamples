@@ -16,8 +16,8 @@ class ExpandableView: CustomView {
 
     /// MARK: Properties
 
-    var expandButton:UIButton = UIButton(type:.system) as UIButton
-    var moreTextLabel = UILabel(frame: CGRect(x: 5, y: 30, width: 200, height: 120))
+    var expandButton:UIButton = UIButton(type:.System) as UIButton
+    var moreTextLabel = UILabel(frame: CGRectMake(5, 30, 200, 120))
 
     /// MARK: Private methods
 
@@ -25,13 +25,13 @@ class ExpandableView: CustomView {
         super.setup()
 
         // View setup (nothing to do with Accessibility).
-        self.expandButton.frame = CGRect(x: 5, y: 5, width: 100, height: 20)
-        self.expandButton.setTitle("Details", for: UIControlState())
-        self.expandButton.addTarget(self, action: #selector(ExpandableView.userDidPressExpand), for: .touchUpInside)
+        self.expandButton.frame = CGRectMake(5, 5, 100, 20)
+        self.expandButton.setTitle("Details", forState: .Normal)
+        self.expandButton.addTarget(self, action: "userDidPressExpand", forControlEvents: .TouchUpInside)
         self.moreTextLabel.text = "Paragraph 1\nblablabla\n...\nParagraph 524\nblablabla"
         self.moreTextLabel.numberOfLines = 0
-        self.moreTextLabel.lineBreakMode = .byWordWrapping
-        self.moreTextLabel.isHidden = false
+        self.moreTextLabel.lineBreakMode = .ByWordWrapping
+        self.moreTextLabel.hidden = false
         self.addSubview(self.moreTextLabel)
         self.addSubview(self.expandButton)
 
@@ -46,7 +46,7 @@ class ExpandableView: CustomView {
 
     func userDidPressExpand() {
         // Hide or unhide the text label.
-        self.moreTextLabel.isHidden = !self.moreTextLabel.isHidden
+        self.moreTextLabel.hidden = !self.moreTextLabel.hidden
 
         // Post a notification that the layout has changed.
         UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, "")

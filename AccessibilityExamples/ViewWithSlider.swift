@@ -28,8 +28,8 @@ class ViewWithSlider: CustomView {
 
         // View setup (nothing to do with Accessibility).
         self.textLabel.text = "Warp factor"
-        self.textLabel.frame = CGRect(x: 5, y: 5, width: 200, height: 50)
-        self.theSlider.frame = CGRect(x: 5, y: 55, width: 200, height: 50)
+        self.textLabel.frame = CGRectMake(5, 5, 200, 50)
+        self.theSlider.frame = CGRectMake(5, 55, 200, 50)
         self.theSlider.minimumValue = 0
         self.theSlider.maximumValue = 8
         self.addSubview(self.textLabel)
