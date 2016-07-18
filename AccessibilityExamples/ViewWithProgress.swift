@@ -36,7 +36,7 @@ class ViewWithProgress: CustomView {
         // View setup (nothing to do with Accessibility).
         self.startButton.frame = CGRectMake(5, 5, 100, 20)
         self.startButton.setTitle("Selfdestruct", forState: .Normal)
-        self.startButton.addTarget(self, action: "userDidPressSelfdestruct", forControlEvents: .TouchUpInside)
+        self.startButton.addTarget(self, action: #selector(ViewWithProgress.userDidPressSelfdestruct), forControlEvents: .TouchUpInside)
         self.progressBar.frame = CGRectMake(5, 30, 200, 20)
         self.progressBar.progress = 0.0
         self.addSubview(self.progressBar)
@@ -64,7 +64,7 @@ class ViewWithProgress: CustomView {
         // seconds.
         let countdownTimer = NSTimer.scheduledTimerWithTimeInterval(0.5,
             target: self,
-            selector: "progressing",
+            selector: #selector(ViewWithProgress.progressing),
             userInfo: nil,
             repeats: true)
         self.destructionTimer = countdownTimer

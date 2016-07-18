@@ -13,23 +13,12 @@
 		6BD76A951AA3A54B003A9E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BD76A931AA3A54B003A9E5A /* Main.storyboard */; };
 		6BD76A971AA3A54B003A9E5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BD76A961AA3A54B003A9E5A /* Images.xcassets */; };
 		6BD76A9A1AA3A54B003A9E5A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD76A981AA3A54B003A9E5A /* LaunchScreen.xib */; };
-		6BD76AA61AA3A54B003A9E5A /* AccessibilityExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD76AA51AA3A54B003A9E5A /* AccessibilityExamplesTests.swift */; };
 		6BD76AB01AA3A57A003A9E5A /* ViewWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD76AAF1AA3A57A003A9E5A /* ViewWithSwitch.swift */; };
 		6BD76AB21AA3A589003A9E5A /* ViewWithSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD76AB11AA3A589003A9E5A /* ViewWithSlider.swift */; };
 		6BD76AB41AA3A59C003A9E5A /* ViewWithCustomElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD76AB31AA3A59C003A9E5A /* ViewWithCustomElements.swift */; };
 		6BD76AB61AA3A5B2003A9E5A /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD76AB51AA3A5B2003A9E5A /* ExpandableView.swift */; };
 		6BD76AB81AA3A8FC003A9E5A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD76AB71AA3A8FC003A9E5A /* CustomView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6BD76AA01AA3A54B003A9E5A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BD76A821AA3A54B003A9E5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6BD76A891AA3A54B003A9E5A;
-			remoteInfo = AccessibilityExamples;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6B32DD221AAEBB90001CAA21 /* Embed App Extensions */ = {
@@ -53,9 +42,6 @@
 		6BD76A941AA3A54B003A9E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BD76A961AA3A54B003A9E5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6BD76A991AA3A54B003A9E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6BD76A9F1AA3A54B003A9E5A /* AccessibilityExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccessibilityExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BD76AA41AA3A54B003A9E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BD76AA51AA3A54B003A9E5A /* AccessibilityExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityExamplesTests.swift; sourceTree = "<group>"; };
 		6BD76AAF1AA3A57A003A9E5A /* ViewWithSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithSwitch.swift; sourceTree = "<group>"; };
 		6BD76AB11AA3A589003A9E5A /* ViewWithSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithSlider.swift; sourceTree = "<group>"; };
 		6BD76AB31AA3A59C003A9E5A /* ViewWithCustomElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithCustomElements.swift; sourceTree = "<group>"; };
@@ -65,13 +51,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		6BD76A871AA3A54B003A9E5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6BD76A9C1AA3A54B003A9E5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				6BD76A8C1AA3A54B003A9E5A /* AccessibilityExamples */,
-				6BD76AA21AA3A54B003A9E5A /* AccessibilityExamplesTests */,
 				6BD76A8B1AA3A54B003A9E5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				6BD76A8A1AA3A54B003A9E5A /* AccessibilityExamples.app */,
-				6BD76A9F1AA3A54B003A9E5A /* AccessibilityExamplesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,23 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				6BD76A8E1AA3A54B003A9E5A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6BD76AA21AA3A54B003A9E5A /* AccessibilityExamplesTests */ = {
-			isa = PBXGroup;
-			children = (
-				6BD76AA51AA3A54B003A9E5A /* AccessibilityExamplesTests.swift */,
-				6BD76AA31AA3A54B003A9E5A /* Supporting Files */,
-			);
-			path = AccessibilityExamplesTests;
-			sourceTree = "<group>";
-		};
-		6BD76AA31AA3A54B003A9E5A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6BD76AA41AA3A54B003A9E5A /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,40 +140,19 @@
 			productReference = 6BD76A8A1AA3A54B003A9E5A /* AccessibilityExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6BD76A9E1AA3A54B003A9E5A /* AccessibilityExamplesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6BD76AAC1AA3A54B003A9E5A /* Build configuration list for PBXNativeTarget "AccessibilityExamplesTests" */;
-			buildPhases = (
-				6BD76A9B1AA3A54B003A9E5A /* Sources */,
-				6BD76A9C1AA3A54B003A9E5A /* Frameworks */,
-				6BD76A9D1AA3A54B003A9E5A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6BD76AA11AA3A54B003A9E5A /* PBXTargetDependency */,
-			);
-			name = AccessibilityExamplesTests;
-			productName = AccessibilityExamplesTests;
-			productReference = 6BD76A9F1AA3A54B003A9E5A /* AccessibilityExamplesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6BD76A821AA3A54B003A9E5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Wolfram Schroers";
 				TargetAttributes = {
 					6BD76A891AA3A54B003A9E5A = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					6BD76A9E1AA3A54B003A9E5A = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 6BD76A891AA3A54B003A9E5A;
 					};
 				};
 			};
@@ -231,7 +170,6 @@
 			projectRoot = "";
 			targets = (
 				6BD76A891AA3A54B003A9E5A /* AccessibilityExamples */,
-				6BD76A9E1AA3A54B003A9E5A /* AccessibilityExamplesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +182,6 @@
 				6BD76A951AA3A54B003A9E5A /* Main.storyboard in Resources */,
 				6BD76A9A1AA3A54B003A9E5A /* LaunchScreen.xib in Resources */,
 				6BD76A971AA3A54B003A9E5A /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6BD76A9D1AA3A54B003A9E5A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,23 +203,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BD76A9B1AA3A54B003A9E5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6BD76AA61AA3A54B003A9E5A /* AccessibilityExamplesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6BD76AA11AA3A54B003A9E5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6BD76A891AA3A54B003A9E5A /* AccessibilityExamples */;
-			targetProxy = 6BD76AA01AA3A54B003A9E5A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6BD76A931AA3A54B003A9E5A /* Main.storyboard */ = {
@@ -331,6 +246,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -397,6 +313,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = AccessibilityExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.hello.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -409,43 +326,8 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = AccessibilityExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.hello.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		6BD76AAD1AA3A54B003A9E5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AccessibilityExamplesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccessibilityExamples.app/AccessibilityExamples";
-			};
-			name = Debug;
-		};
-		6BD76AAE1AA3A54B003A9E5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AccessibilityExamplesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccessibilityExamples.app/AccessibilityExamples";
 			};
 			name = Release;
 		};
@@ -466,15 +348,6 @@
 			buildConfigurations = (
 				6BD76AAA1AA3A54B003A9E5A /* Debug */,
 				6BD76AAB1AA3A54B003A9E5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6BD76AAC1AA3A54B003A9E5A /* Build configuration list for PBXNativeTarget "AccessibilityExamplesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6BD76AAD1AA3A54B003A9E5A /* Debug */,
-				6BD76AAE1AA3A54B003A9E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

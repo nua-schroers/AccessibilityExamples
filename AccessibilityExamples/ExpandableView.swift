@@ -27,7 +27,7 @@ class ExpandableView: CustomView {
         // View setup (nothing to do with Accessibility).
         self.expandButton.frame = CGRectMake(5, 5, 100, 20)
         self.expandButton.setTitle("Details", forState: .Normal)
-        self.expandButton.addTarget(self, action: "userDidPressExpand", forControlEvents: .TouchUpInside)
+        self.expandButton.addTarget(self, action: #selector(ExpandableView.userDidPressExpand), forControlEvents: .TouchUpInside)
         self.moreTextLabel.text = "Paragraph 1\nblablabla\n...\nParagraph 524\nblablabla"
         self.moreTextLabel.numberOfLines = 0
         self.moreTextLabel.lineBreakMode = .ByWordWrapping
