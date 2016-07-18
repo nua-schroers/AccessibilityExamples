@@ -1,12 +1,14 @@
 AccessibilityExamples
 =====================
 
+![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/nua-schroers/AccessibilityExamples/master/LICENSE) ![Travis build](https://travis-ci.org/nua-schroers/AccessibilityExamples.svg?=master)
+
 Executive Summary
 -----------------
 
 This is a collection of common use cases for VoiceOver on iOS. Open `AccessibilityExamples.xcodeproj` using Xcode 6.2 or higher. I strongly recommend that you use an actual iPhone.
 
-The license is MIT (cf. the included file `LICENSE`).
+The license is MIT (cf. the included file [LICENSE](https://raw.githubusercontent.com/nua-schroers/AccessibilityExamples/master/LICENSE)).
 
 Features
 --------
