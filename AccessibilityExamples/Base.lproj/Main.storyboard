@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,49 +19,48 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfW-V9-aIj" customClass="ViewWithSwitch" customModule="AccessibilityExamples" customModuleProvider="target">
-                                <rect key="frame" x="21" y="40" width="558" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="21" y="40" width="333" height="50"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rYb-AW-cNI"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sa-XH-eTM" customClass="ViewWithCustomElements" customModule="AccessibilityExamples" customModuleProvider="target">
-                                <rect key="frame" x="21" y="200" width="558" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="21" y="200" width="333" height="50"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Uba-zm-SBK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0r-iY-FG3" customClass="ViewWithSlider" customModule="AccessibilityExamples" customModuleProvider="target">
-                                <rect key="frame" x="21" y="95" width="558" height="100"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="21" y="95" width="333" height="100"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="bGm-gT-Z4Z"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RT0-rI-ymf" customClass="ExpandableView" customModule="AccessibilityExamples" customModuleProvider="target">
-                                <rect key="frame" x="21" y="255" width="558" height="150"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="21" y="255" width="333" height="150"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="fJt-BN-NWv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-IH-biI" customClass="ViewWithProgress" customModule="AccessibilityExamples" customModuleProvider="target">
-                                <rect key="frame" x="21" y="410" width="558" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="21" y="410" width="333" height="50"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XVj-wc-ICh"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RT0-rI-ymf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="52B-rG-xY3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Sa-XH-eTM" secondAttribute="trailing" constant="5" id="CQN-tp-jk4"/>
                             <constraint firstItem="6Sa-XH-eTM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="E2G-QN-wZF"/>
                             <constraint firstItem="F0r-iY-FG3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="5" id="JLE-aA-2bc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GfW-V9-aIj" secondAttribute="trailing" constant="5" id="RCa-dd-MTf"/>
@@ -64,7 +68,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6Sa-XH-eTM" secondAttribute="trailing" constant="5" id="Vig-Pt-2vW"/>
                             <constraint firstItem="GfW-V9-aIj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="Wgw-xq-HK1"/>
                             <constraint firstItem="NMS-IH-biI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="X5u-0r-VKK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RT0-rI-ymf" secondAttribute="trailing" constant="5" id="ZFc-yJ-MOy"/>
                             <constraint firstItem="RT0-rI-ymf" firstAttribute="top" secondItem="F0r-iY-FG3" secondAttribute="bottom" constant="60" id="alJ-Cj-O2L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NMS-IH-biI" secondAttribute="trailing" constant="5" id="bF1-vt-0VC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RT0-rI-ymf" secondAttribute="trailing" constant="5" id="cMI-jp-UMs"/>
