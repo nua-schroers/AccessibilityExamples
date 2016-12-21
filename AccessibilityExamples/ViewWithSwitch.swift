@@ -30,8 +30,8 @@ class ViewWithSwitch: CustomView {
         // View setup (nothing to do with Accessibility).
         let powerSettingText = NSLocalizedString("Power setting", comment: "")
         self.textLabel.text = powerSettingText
-        self.textLabel.frame = CGRectMake(5, 5, 200, 50)
-        self.theSwitch.frame = CGRectMake(205, 5, 50, 50)
+        self.textLabel.frame = CGRect(x: 5, y: 5, width: 200, height: 50)
+        self.theSwitch.frame = CGRect(x: 205, y: 5, width: 50, height: 50)
         self.addSubview(self.textLabel)
         self.addSubview(self.theSwitch)
 
@@ -52,7 +52,7 @@ class ViewWithSwitch: CustomView {
         super.updateAccessibility()
 
         // The value is the current setting and we use a custom text here.
-        self.accessibilityValue = self.theSwitch.on ? "active" : "inactive"
+        self.accessibilityValue = self.theSwitch.isOn ? "active" : "inactive"
     }
 
     /// MARK: UIAccessibilityAction
@@ -64,7 +64,7 @@ class ViewWithSwitch: CustomView {
     /// turned off!
     override func accessibilityActivate() -> Bool {
         // Toggle the switch.
-        let newValue = !self.theSwitch.on
+        let newValue = !self.theSwitch.isOn
         self.theSwitch.setOn(newValue, animated: true)
 
         // Update the accessibility value.

@@ -6,7 +6,7 @@ AccessibilityExamples
 Executive Summary
 -----------------
 
-This is a collection of common use cases for VoiceOver on iOS. Open `AccessibilityExamples.xcodeproj` using Xcode 6.2 or higher. I strongly recommend that you use an actual iPhone.
+This is a collection of common use cases for VoiceOver on iOS. Open `AccessibilityExamples.xcodeproj` using Xcode 8.2 or higher (the current version requires at least Swift 3 and is not source code-compatible with earlier versions). I strongly recommend that you use an actual iPhone.
 
 The license is MIT (cf. the included file [LICENSE](https://raw.githubusercontent.com/nua-schroers/AccessibilityExamples/master/LICENSE)).
 
