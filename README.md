@@ -1,7 +1,7 @@
 AccessibilityExamples
 =====================
 
-![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/nua-schroers/AccessibilityExamples/master/LICENSE) ![Travis build](https://travis-ci.org/nua-schroers/AccessibilityExamples.svg?=master)
+![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/nua-schroers/AccessibilityExamples/master/LICENSE) ![Travis build](https://travis-ci.org/nua-schroers/AccessibilityExamples.svg?=master)
 
 Executive Summary
 -----------------
