@@ -43,7 +43,7 @@ class ViewWithSwitch: CustomView {
         self.accessibilityHint = "Double tap to activate or deactivate" // This is the hint.
 
         // This view shall behave as a button with VoiceOver.
-        self.accessibilityTraits = super.accessibilityTraits | UIAccessibilityTraitButton
+        self.accessibilityTraits = UIAccessibilityTraits(rawValue: super.accessibilityTraits.rawValue | UIAccessibilityTraits.button.rawValue)
 
         self.updateAccessibility()
     }
@@ -71,7 +71,7 @@ class ViewWithSwitch: CustomView {
         self.updateAccessibility()
 
         // Inform the user of the new situation.
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, "")
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: "")
 
         // Return whether the action was successful (in this case is it always is).
         return true

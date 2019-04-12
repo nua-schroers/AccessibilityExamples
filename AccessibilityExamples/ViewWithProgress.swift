@@ -35,7 +35,7 @@ class ViewWithProgress: CustomView {
 
         // View setup (nothing to do with Accessibility).
         self.startButton.frame = CGRect(x: 5, y: 5, width: 100, height: 20)
-        self.startButton.setTitle("Selfdestruct", for: UIControlState())
+        self.startButton.setTitle("Selfdestruct", for: UIControl.State())
         self.startButton.addTarget(self, action: #selector(ViewWithProgress.userDidPressSelfdestruct), for: .touchUpInside)
         self.progressBar.frame = CGRect(x: 5, y: 30, width: 200, height: 20)
         self.progressBar.progress = 0.0
@@ -56,7 +56,7 @@ class ViewWithProgress: CustomView {
 
     /// MARK: Respond to button
 
-    func userDidPressSelfdestruct() {
+    @IBAction func userDidPressSelfdestruct() {
         self.startButton.isEnabled = false
         self.resetTimer()
 
@@ -84,7 +84,7 @@ class ViewWithProgress: CustomView {
         }
     }
 
-    func progressing() {
+    @IBAction func progressing() {
         // Increase progress (data model only).
         self.destructionProgress += 0.5
 
@@ -92,17 +92,17 @@ class ViewWithProgress: CustomView {
         // after 25 seconds.
         switch (self.destructionProgress) {
         case _ where fabs(destructionProgress - 5.0) < 0.1:
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "15 seconds remaining")
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "15 seconds remaining")
         case _ where fabs(destructionProgress - 10.0) < 0.1:
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "10 seconds remaining")
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "10 seconds remaining")
         case _ where fabs(destructionProgress - 15.0) < 0.1:
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "5 seconds remaining")
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "5 seconds remaining")
         case _ where fabs(destructionProgress - 20.0) < 0.1:
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Selfdestruct completed")
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "Selfdestruct completed")
         case _ where destructionProgress > 25.0 :
             self.resetTimer()
             self.startButton.isEnabled = true
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "Alive again")
+            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: "Alive again")
         default:
             break
         }
