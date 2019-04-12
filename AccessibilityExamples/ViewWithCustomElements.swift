@@ -29,8 +29,8 @@ class ViewWithCustomElements: CustomView {
 
         // Draw the string "World" right-ish in this view.
         let someOtherString = NSString(format: "World")
-        let attribs: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.green]
-        someOtherString.draw(at: CGPoint(x: 120, y: 10), withAttributes: attribs)
+        let attribs: [String: AnyObject] = [convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): UIColor.green]
+        someOtherString.draw(at: CGPoint(x: 120, y: 10), withAttributes: convertToOptionalNSAttributedStringKeyDictionary(attribs))
 
         // Setup the accessibility container.
         self.setupContainer()
@@ -48,12 +48,12 @@ class ViewWithCustomElements: CustomView {
         // drawRect may not be called again automatically.
 
         // Get the frame of the first string (in screen coordinates).
-        let firstStringSize = NSString(format: "Hello").size(attributes: nil)
+        let firstStringSize = NSString(format: "Hello").size(withAttributes: nil)
         let firstStringRect = CGRect(x: 10, y: 10, width: firstStringSize.width, height: firstStringSize.height)
         let firstStringFrame = self.convert(firstStringRect, to: nil)
 
         // Get the frame of the second string (in screen coordinates).
-        let secondStringSize = NSString(format: "World").size(attributes: nil)
+        let secondStringSize = NSString(format: "World").size(withAttributes: nil)
         let secondStringRect = CGRect(x: 120, y: 10, width: secondStringSize.width, height: secondStringSize.height)
         let secondStringFrame = self.convert(secondStringRect, to: nil)
 
@@ -62,14 +62,14 @@ class ViewWithCustomElements: CustomView {
         let element1 = UIAccessibilityElement(accessibilityContainer: self)
         element1.accessibilityFrame = firstStringFrame
         element1.accessibilityLabel = "Shows Hello"
-        element1.accessibilityTraits = UIAccessibilityTraitStaticText
+        element1.accessibilityTraits = UIAccessibilityTraits.staticText
 
         // Do the same for the second element, the stand-in for the
         // custom-drawn string "World".
         let element2 = UIAccessibilityElement(accessibilityContainer: self)
         element2.accessibilityFrame = secondStringFrame
         element2.accessibilityLabel = "Shows World"
-        element2.accessibilityTraits = UIAccessibilityTraitStaticText
+        element2.accessibilityTraits = UIAccessibilityTraits.staticText
 
         // Set the accessbilityElements which turns this view into an
         // Accessibility Container.
@@ -88,4 +88,15 @@ class ViewWithCustomElements: CustomView {
         // automatically called when needed.
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

@@ -45,7 +45,7 @@ class ViewWithSlider: CustomView {
         // The entire view shall behave as an adjustible element,
         // i.e. it shall support and respond to swipe-up and -down
         // gestures.
-        self.accessibilityTraits = super.accessibilityTraits | UIAccessibilityTraitAdjustable
+        self.accessibilityTraits = UIAccessibilityTraits(rawValue: super.accessibilityTraits.rawValue | UIAccessibilityTraits.adjustable.rawValue)
         self.updateAccessibility()
     }
 
@@ -74,7 +74,7 @@ class ViewWithSlider: CustomView {
 
         // Update the value.
         self.updateAccessibility()
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, "")
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: "")
     }
 
     /// This method is automagically called when the user does a
@@ -93,7 +93,7 @@ class ViewWithSlider: CustomView {
 
         // Update the value.
         self.updateAccessibility()
-        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, "")
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: "")
     }
 
 }
