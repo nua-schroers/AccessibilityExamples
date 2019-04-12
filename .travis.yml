@@ -1,6 +1,6 @@
 # This is actually a Swift-project.
 language: objective-c
-osx_image: xcode10.1
+osx_image: xcode10.2
 script:
-    - xcodebuild -project AccessibilityExamples.xcodeproj -scheme AccessibilityExamples -sdk iphonesimulator12.1 build
+    - xcodebuild -project AccessibilityExamples.xcodeproj -scheme AccessibilityExamples -sdk iphonesimulator12.2 build
 
